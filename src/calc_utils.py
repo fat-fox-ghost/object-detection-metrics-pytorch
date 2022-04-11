@@ -1,15 +1,23 @@
+""" Calculation utilities.
+
+This module contains helper functions.
+
+List of function names
+----------------------
+    - calculate_iou
+"""
 import numpy as np
 
 
-def get_iou(bbox_1: np.ndarray, bbox_2: np.ndarray):
+def calculate_iou(bbox_1: np.ndarray, bbox_2: np.ndarray) -> float:
     """ The function calculates the intersection over union (IOU) value
         for 2 bounding boxes.
 
         Parameters
         ----------
-        box1: list
-            The first bounding box (see get_bbox()).
-        box2: list
+        box1: np.ndarray
+            The first bounding box.
+        box2: np.ndarray
             The second bounding box.
 
         Returns
@@ -17,15 +25,14 @@ def get_iou(bbox_1: np.ndarray, bbox_2: np.ndarray):
         float:
             The IOU value.
     """
-    xa = max(box1[0], box2[0])
-    ya = max(box1[1], box2[1])
-    xb = min(box1[2], box2[2])
-    yb = min(box1[3], box2[3])
+    xa = np.maximum(bbox_1[0], bbox_2[0])
+    ya = np.maximum(bbox_1[1], bbox_2[1])
+    xb = np.minimum(bbox_1[2], bbox_2[2])
+    yb = np.minimum(bbox_1[3], bbox_2[3])
 
     intersect_area = max(0, xb-xa) * max(0, yb-ya)
 
-    box1_area = (box1[2]-box1[0]) * (box1[3]-box1[1])
-    box2_area = (box2[2]-box2[0]) * (box2[3]-box2[1])
+    bbox_1_area = (bbox_1[2] - bbox_1[0]) * (bbox_1[3] - bbox_1[1])
+    bbox_2_area = (bbox_2[2] - bbox_2[0]) * (bbox_2[3] - bbox_2[1])
 
-    return intersect_area / (box1_area + box2_area - intersect_area)
-
+    return intersect_area / (bbox_1_area + bbox_2_area - intersect_area)
