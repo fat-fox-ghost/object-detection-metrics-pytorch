@@ -16,3 +16,14 @@ cd object-detection-metrics-pytorch
 
 python setup.py install
 ```
+
+## Buiding docs
+
+```sh
+cd docs
+
+pip install -r requirements.txt
+
+make html
+make epub
+```
