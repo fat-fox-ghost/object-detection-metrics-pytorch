@@ -1,6 +1,6 @@
 # Object Detection Metrics (Pytorch)
 
-## TODO:
+## TODO
 
 - [ ] Searching for True Positive, False Positive and False Negative bounding
       boxes.
