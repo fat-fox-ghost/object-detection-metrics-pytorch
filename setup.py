@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup_info = dict(
-    name='od_metrics_pytorch',
+    name='object_detection_metrics_pytorch',
     version='0.0.1',
     author='fat-fox-ghost',
     author_email='',
@@ -27,8 +27,8 @@ setup_info = dict(
     ],
 
     # Packages
-    packages=['od_metrics'],
-    package_dir={'od_metrics' : 'src'},
+    packages=['object_detection_metrics_pytorch'],
+    package_dir={'object_detection_metrics_pytorch' : 'src'},
 
     # CSV data
     include_package_data=True,
