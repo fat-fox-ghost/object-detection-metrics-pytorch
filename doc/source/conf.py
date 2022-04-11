@@ -13,6 +13,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+import numpydoc
 import sphinx_rtd_theme
 
 
@@ -33,6 +34,7 @@ release = '0.0.1'
 # ones.
 extensions = [
     'sphinx_rtd_theme',
+    'numpydoc'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

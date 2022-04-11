@@ -5,15 +5,15 @@ def get_iou(bbox_1: np.ndarray, bbox_2: np.ndarray):
     """ The function calculates the intersection over union (IOU) value
         for 2 bounding boxes.
 
-        Arguments:
+        Parameters
         ----------
         box1: list
             The first bounding box (see get_bbox()).
         box2: list
             The second bounding box.
 
-        Returns:
-        --------
+        Returns
+        -------
         float:
             The IOU value.
     """
