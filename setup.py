@@ -6,7 +6,7 @@ setup_info = dict(
     author='fat-fox-ghost',
     author_email='',
     url='https://github.com/fat-fox-ghost/object-detection-metrics-pytorch',
-    project_urls = {
+    project_urls={
         'Bug Tracker': 'https://github.com/fat-fox-ghost/object-detection-'
                        'metrics-pytorch/issues'
     },
@@ -28,10 +28,10 @@ setup_info = dict(
 
     # Packages
     packages=['object_detection_metrics_pytorch'],
-    package_dir={'object_detection_metrics_pytorch' : 'src'},
+    package_dir={'object_detection_metrics_pytorch': 'src'},
 
     # CSV data
-    include_package_data=True,
+    # include_package_data=True,
 
     # Dependencies
     install_requires=open('requirements.txt').read().split('\n'),
