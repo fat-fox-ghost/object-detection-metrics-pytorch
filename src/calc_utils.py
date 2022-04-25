@@ -10,8 +10,7 @@ import numpy as np
 
 
 def calculate_iou(bbox_1: np.ndarray, bbox_2: np.ndarray) -> float:
-    """ The function calculates the intersection over union (IOU) value
-        for 2 bounding boxes.
+    """ Calculates the Intersection over Union value for 2 bounding boxes.
 
         Parameters
         ----------
